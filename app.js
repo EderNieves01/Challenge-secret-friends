@@ -6,9 +6,19 @@ let inputFriend = document.getElementById("amigo");
 let friends = [];
 
  btnAddFriends.addEventListener("click", addFriends);
+
 function addFriends(){
-    friends.push(inputFriend.value);
-    resetInput();
+    let inputValue = inputFriend.value;
+    console.log(inputValue)
+    if(inputValue){
+        friends.push(inputValue);
+        resetInput();
+        console.log(friends);
+    }else{
+        alert("Debes ingresar un nombre de amigo");
+        return;
+    }
+
 }
 
 function resetInput(){
